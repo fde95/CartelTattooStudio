@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css"> <!--Bootstrap-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="./main.css">
+    <title>Cartel Tattoo Studio</title>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho"> <!--Incluir Padding com a 'P' = All / Ao incluir as letras 'T','B',S' ou 'E' será incluso um direcionamento de 'TOP', 'BOTTOM', 'START' e 'END'-->
+        <div class="container">
+            <h1 class="navbar-brand m-0">Cartel Tattoo Studio</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao"> <!--Chamada de Botão Hamburguer / data-bs-toggle irá colapsar o menu / data-bs-target irá referenciar o NAV-->
+                <span class="navbar-toggler-icon"></span> <!--span de imagem do menu hamburguer-->
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao"> <!--apenas NAV irá aparecer menu padrão / navbar- collapse collapse irá remover o NAV da tela até que seja Colapsado / deve conter ID para referencia de botão de colapso / justify-content-end serve para alinhar menu ao final da div-->
+                <ul class="nav nav-pills d-block d-md-flex"> <!--d-md-flex = sintaxe: 'propriedade'-'breakpoint'-'valor' = igual para todos--->
+                    <li class="nav-item fw-bold"> <!--fw = font-weight-->
+                        <a class="nav-link" href="#aboutUs">
+                            <i class="bi bi-house-door-fill me-1"></i> <!--O icone irá se adaptar as configurações de cor do css-->
+                            Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#servicos">
+                            <i class="bi bi-calendar-check-fill me-1"></i>
+                            Serviços
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#trabalhos">
+                            <i class="bi bi-postcard-fill me-1"></i>
+                            Trampos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#contact">
+                            <i class="bi bi-chat-fill me-1"></i>
+                            Fale conosco
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true"> <!--Inicio do Spy no Scroll-->
+        <!--Inicio da aba Sobre-->
+        <section id="aboutUs">
+            <!--Inicio do Carrossel-->
+            <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carrossel"><!--Chama o carrossel - na função slide - com efeito fade / data irá realizar o autoplay / ID necessário para funcionamento dos botões-->
+                <div class="carousel-inner"> <!--Abre o carrossel-->
+                    <div class="carousel-item active" data-bs-interval="2300"> <!--Item do Carrossel - Para iniciar, deve conter a class Active-->
+                        <img src="./imagens/slides/banner1.png" alt="Homem tatoado, de costas. Uma mulher olhando para frente.">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2300">
+                        <img src="./imagens/slides/banner2.png" alt="Mulher tatuada com as mãos na boca.">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2300">
+                        <img src="./imagens/slides/banner3.png" alt="Homem tatuado mostrando seus anéis.">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2300">
+                        <img src="./imagens/slides/banner4.png" alt="Homem tatuado tirando sua blusa para mostrar as tatuagens nas costas.">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2300">
+                        <img src="./imagens/slides/banner5.png" alt="Homem com tatuagem no pescoço.">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2300">
+                        <img src="./imagens/slides/banner6.png" alt="Casal tatuado se olhando.">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev"> <!--Botão de mudança de imagem / target selecionará a área desejada / data-bs-slide = para onde o botão levará -->
+                    <span class="carousel-control-prev-icon"></span> <!--icone de seta-->
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators"> <!--Chama indicador de apresentação atual e qnt inclusa-->
+                    <button type="button" class="active" data-bs-target="#carrossel" data-bs-slide-to="0"></button> <!--a class active deve estar no primeiro elemento / o Slide-To levará para o array correspondente (começando sempre da casa 0)-->
+                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="5"></button>
+                </div>
+            </div>
+            <!--Fim do Carrossel-->
+        
+            <div class="pt-5 pb-5">
+                <div class="container">
+                    <nav class="nav nav-pills justify-content-center"> <!--Criando abas dentro da DIV com Navegação / A Classe "nav-tabs" trás visual de Abas / "nav-pills" tás visual de botões ou Pilulas-->
+                        <button data-bs-toggle="tab" data-bs-target="#aba1" class="fw-bolder nav-link active" type="button">El Cartel</button> <!--Botão ref a aba-->
+                        <button data-bs-toggle="tab" data-bs-target="#aba2" class="fw-bolder nav-link" type="button">El Estudio</button>                    </nav>
+                    <div class="tab-content"> <!--Conteúdo da Aba-->
+                        <div class="tab-pane active" id="aba1"> <!--Separação do conteúdo de cada Tab-->
+                            <div class="row mt-5 about">
+                                <div class="col-lg-3 cartel">
+                                    <img class="rounded w-100 d-block" src="./imagens/about/aboutUsPB 1.png" alt="">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2>Cartel</h2>
+                                    <p>
+                                        O Cartel Tattoo Studio é um estúdio de tatuagem que se inspira na tradição de rua chilena para criar um estilo de vida único. Nosso objetivo é fazer com que as pessoas se sintam elegantes e sofisticadas, mesmo com tatuagens em estilo de rua. Nós prezamos pela qualidade em tudo o que fazemos e a nossa história de mais de uma década no mercado mostra isso.
+                                        O estilo Cartel vem ganhando espaço em todo o Brasil e estamos orgulhosos de sermos uma referência na criação de um estilo de vida baseado na tatuagem. Nós acreditamos que as tatuagens devem ser uma expressão de quem somos e do que valorizamos, e por isso trabalhamos em colaboração com nossos clientes para criar tatuagens únicas e personalizadas.
+                                        <br><br>
+                                        No Cartel, cada tatuagem é uma obra de arte. Nós somos apaixonados por tatuagens e pelo estilo de vida street. A nossa equipe é altamente qualificada e está empenhada em proporcionar aos nossos clientes uma experiência excepcional. Nós criamos um ambiente acolhedor e profissional para que nossos clientes se sintam confortáveis e confiantes durante todo o processo.
+                                        Se você está procurando um estúdio de tatuagem que valorize a qualidade, a criatividade e o estilo de vida street, então o Cartel Tattoo Studio é o lugar certo para você. Junte-se ao estilo Cartel e crie sua própria obra de arte única e personalizada. Entre em contato conosco e agende uma consulta para saber mais sobre como podemos transformar sua ideia em uma tatuagem incrível.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 cartel2">
+                                    <img class="rounded w-100 d-block" src="./imagens/about/aboutUsPB 2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="aba2"> 
+                            <div class="row mt-5 about">
+                                <div class="col-lg-7">
+                                    <h2>Cartel Tattoo Studio</h2>
+                                    <p>
+                                        Seja bem-vindo ao Cartel Tattoo Studio, onde a tatuagem é uma forma de arte de rua com estilo latino. Nós somos especialistas em tatuagens em preto e cinza em todos os estilos, e estamos presentes no mercado brasileiro há mais de uma década.
+                                        Aqui no Cartel, somos apaixonados por tatuagem e pelo estilo de vida street. Temos um compromisso com a excelência no atendimento ao cliente e trabalhamos em colaboração para criar tatuagens únicas e personalizadas que atendam às expectativas e desejos de cada um.
+                                        Nosso estúdio é altamente requisitado por nossa dedicação aos detalhes e pela qualidade excepcional de nossas tatuagens, que são projetadas para durar ao longo do tempo. Nós nos esforçamos para criar uma experiência de atendimento excepcional para cada um dos nossos clientes.
+                                        Se você está procurando por uma tatuagem de alta qualidade em um ambiente profissional e acolhedor, o Cartel Tattoo Studio é o lugar certo para você. Entre em contato conosco e agende uma consulta hoje mesmo para saber por que somos um dos estúdios de tatuagem mais prestigiados do Brasil.                                
+                                    </p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <img class="rounded w-100 d-block" src="./imagens/about/aboutUs 3.jpg.png" alt="">
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Inicio da aba Sobre-->
+
+        <!--Inicio da aba Eventos-->
+        <section id="servicos" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="emphasis h1 text-center pb-4">O que você precisar, <span>nós temos!</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-2" src="./imagens/serviços/service1.png" alt="Homem tatuado estilo japones.">
+                        <h3 class="section-tittle ps-2 pt-2">
+                            <span><i class="bi bi-brush-fill"></i></span>
+                            Tattoo
+                        </h3>
+                        <p class="ps-2 pe-2">
+                            Trampamos com tatuagens em preto e cinza em todos os estilos, criando obras de arte únicas e personalizadas desenvolvidas pelos melhores tatuadores do Brasil.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-2" src="./imagens/serviços/service2.png" alt="Homem com tatuagem no rosto e piercings.">
+                        <h3 class="section-tittle ps-2 pt-2">
+                            <span><i class="bi bi-pin-map-fill"></i></span>
+                            Body Piercing
+                        </h3>
+                        <p class="ps-2 pe-2">
+                            Temos serviços profissionais de body piercing, com uma grande variedade de opções de piercing e joias de alta qualidade para criar um visual único e personalizado.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-2" src="./imagens/serviços/service3.png" alt="Homem cortando cabelo.">
+                        <h3 class="section-tittle ps-2 pt-2">
+                            <span><i class="bi bi-scissors"></i></span>
+                            Barbearia
+                        </h3>
+                        <p class="ps-2 pe-2">
+                            Serviços de barbearia com estilo único e atendimento de alta qualidade. Profissionais especializados em cortes de cabelo e barba, com produtos de primeira linha.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim da aba Eventos-->
+
+        <!--Inicio da aba Cardápio-->
+        <section id="trabalhos" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="emphasis h1 text-center mb-5">Nossos <span>Trampos</span></h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <nav class="nav nav-pills flex-column">
+                            <button data-bs-toggle="tab" data-bs-target="#oldSchool" type="button" class="fw-bold text-start nav-link w-100 active">Old School</button>
+                            <button data-bs-toggle="tab" data-bs-target="#japanese" type="button" class="fw-bold text-start nav-link w-100">Japonesa</button>
+                            <button data-bs-toggle="tab" data-bs-target="#floral" type="button" class="fw-bold text-start nav-link w-100">Floral</button>
+                            <button data-bs-toggle="tab" data-bs-target="#geometric" type="button" class="fw-bold text-start nav-link w-100">Geometric</button>
+                            <button data-bs-toggle="tab" data-bs-target="#blackout" type="button" class="fw-bold text-start nav-link w-100">BLACKOUT</button>
+                        </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="oldSchool">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/oldSchool/oldSchool (1).jpg" alt="https://www.pinterest.ie/pin/326159198013743071/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Old School Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/oldSchool/oldSchool (2).jpg" alt="https://br.pinterest.com/pin/32158584825934248/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Old School Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa. 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/oldSchool/oldSchool (3).jpg" alt="https://br.pinterest.com/pin/783837510122181185/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Old School Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa. 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/oldSchool/oldSchool (4).jpg" alt="https://br.pinterest.com/pin/73183562680268233/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Old School Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa. 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/oldSchool/oldSchool (5).jpg" alt="https://www.pinterest.ie/pin/669558669586447544/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Old School Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa. 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/oldSchool/oldSchool (6).jpg" alt="https://tudocommoda.com">
+                                        <h5 class="mt-3 ps-2 fw-bold">Old School Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa. 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/oldSchool/oldSchool (7).jpg" alt="https://oldschoolfashionbr.wixsite.com/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Old School Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa. 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/oldSchool/oldSchool (8).jpg" alt="https://universoretro.com.br/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Old School Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="japanese">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/japanese/japaneseTattoo (1).jpeg" alt="https://inkppl.com/en/magazine/intervyu/dinos-black-and-red-japanese-tattoos">
+                                        <h5 class="mt-3 ps-2 fw-bold">Japonesa Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/japanese/japaneseTattoo (2).jpg" alt="https://twitter.com/emeraldtattoouk/status/1233467349308755971">
+                                        <h5 class="mt-3 ps-2 fw-bold">Japonesa Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/japanese/japaneseTattoo (3).jpg" alt="https://nextluxury.com/mens-style-and-fashion/japanese-back-tattoo-designs-for-men/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Japonesa Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/japanese/japaneseTattoo (4).jpg" alt="https://inkhappened.com/tattoo-styles/japanese-tattoos/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Japonesa Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/japanese/japaneseTattoo (5).jpg" alt="https://www.pinterest.ie/pin/15762667435539363/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Japonesa Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/japanese/japaneseTattoo (6).jpg" alt="https://www.pinterest.ie/pin/742460688566557927/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Japonesa Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/japanese/japaneseTattoo (7).jpg" alt="https://www.pinterest.ie/pack_pattanapong/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Japonesa Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/japanese/japaneseTattoo (8).jpg" alt="https://www.pinterest.ie/pin/754001162592311929/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Japonesa Tradicional</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="floral">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/floral/floral (1).jpg" alt="https://www.pinterest.at/pin/646618458990495909/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Floral</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/floral/floral (2).jpg" alt="https://www.pinterest.ie/pin/296604325458036060/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Floral</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/floral/floral (3).jpg" alt="https://www.pinterest.ie/pin/841328774110006518/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Floral</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/floral/floral (4).jpg" alt="https://www.pinterest.ie/pin/133419207696479333/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Floral</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/floral/floral (5).jpg" alt="hotcore.info/babki/black-flower-tattoo">
+                                        <h5 class="mt-3 ps-2 fw-bold">Floral</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/floral/floral (6).jpg" alt="https://www.pinterest.ie/pin/416864509251691222/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Floral</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/floral/floral (7).jpg" alt="https://in.pinterest.com/pin/780952391624471376/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Floral</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/floral/floral (8).jpg" alt="https://br.pinterest.com/Patyzeta/quero-fazer/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Floral</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="geometric">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/geometric/geometric (1).jpg" alt="https://www.pinterest.at/pin/324611085653502039/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Geometric Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/geometric/geometric (2).jpg" alt="https://www.pinterest.at/pin/200762095881017276/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Geometric Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/geometric/geometric (3).jpg" alt="https://www.pinterest.at/pin/23995810507669987/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Geometric Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/geometric/geometric (4).jpg" alt="https://www.pinterest.ie/pin/440086194840920465/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Geometric Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/geometric/geometric (5).jpg" alt="https://www.pinterest.ie/pin/238620480254772771/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Geometric Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/geometric/geometric (6).jpg" alt="https://www.pinterest.ie/pin/465418942751790360/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Geometric Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/geometric/geometric (7).jpg" alt="https://www.pinterest.ie/pin/597008494375071734/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Geometric Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/geometric/geometric (8).jpg" alt="https://www.pinterest.ie/pin/1060175568511268240/">
+                                        <h5 class="mt-3 ps-2 fw-bold">Geometric Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="blackout">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/BLACKOUT/BLACKOUT (1).jpg" alt="https://www.pinterest.at/pin/5981411998795320/">
+                                        <h5 class="mt-3 ps-2 fw-bold">BLACKOUT Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/BLACKOUT/BLACKOUT (2).jpg" alt="https://www.pinterest.at/pin/114982596729659063/">
+                                        <h5 class="mt-3 ps-2 fw-bold">BLACKOUT Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/BLACKOUT/BLACKOUT (3).jpg" alt="https://www.pinterest.at/pin/3588874695139023/">
+                                        <h5 class="mt-3 ps-2 fw-bold">BLACKOUT Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/BLACKOUT/BLACKOUT (4).jpg" alt="https://www.pinterest.at/pin/217158013274164346/">
+                                        <h5 class="mt-3 ps-2 fw-bold">BLACKOUT Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/BLACKOUT/BLACKOUT (5).jpg" alt="https://www.pinterest.at/pin/363454632441450673/">
+                                        <h5 class="mt-3 ps-2 fw-bold">BLACKOUT Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/BLACKOUT/BLACKOUT (6).jpg" alt="https://www.pinterest.at/pin/478929741635894252/">
+                                        <h5 class="mt-3 ps-2 fw-bold">BLACKOUT Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/BLACKOUT/BLACKOUT (7).jpg" alt="https://www.pinterest.at/pin/16466354881851567/">
+                                        <h5 class="mt-3 ps-2 fw-bold">BLACKOUT Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./imagens/trabalhos/BLACKOUT/BLACKOUT (8).jpg" alt="https://www.pinterest.at/pin/557320522652636024/">
+                                        <h5 class="mt-3 ps-2 fw-bold">BLACKOUT Tattoo</h5>
+                                        <p class="ps-2 pe-2">
+                                            Imagem meramente ilustrativa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim da aba Cardápio-->
+
+        <!--Inicio da aba Contatos-->
+        <section id="contact" class="pt-5 pb-5">
+            <div class="container">
+                <h2 class="emphasis h1 text-center mb-5"> 
+                    Fale <span>Conosco</span>
+                </h2>
+                <div class="row">
+                    <div class="col-md-7 mb-5">
+                        <form>
+                            <div>
+                                <label for="nome" class="form-label fw-bolder formtext">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="form-label mt-4 fw-bolder formtext">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div>
+                                <label for="cel" class="form-label mt-4 fw-bolder formtext">Celular</label>
+                                <input type="tel" class="form-control" id="cel" name="tel" required>
+                            </div>
+                            <div>
+                                <label for="mensagem" class="form-label mt-4 fw-bolder formtext">Mensagem</label>
+                                <textarea id="mensagem" class="form-control" name="mensagem" required></textarea>
+                            </div>
+                            <button type="submit" class="btn mt-3 w-100">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <h3 class="section-tittle fs-4">
+                                <i class="social bi bi-hand-thumbs-up-fill"></i>
+                                Redes Sociais
+                            </h3>
+                            <ul class="social-links">
+                                <li class="fs-4">
+                                    <a href="https://linktr.ee/fde95" target="_blank">
+                                        <i class="me-3 social bi bi-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-4">
+                                    <a href="https://linktr.ee/fde95" target="_blank">
+                                        <i class="me-3 social bi bi-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-4">
+                                    <a href="https://linktr.ee/fde95" target="_blank">
+                                        <i class="social bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row mt-4">
+                            <h3 class="section-tittle fs-4">
+                                <i class="social bi bi-geo-alt-fill"></i>
+                                Endereço
+                            </h3>
+                            <p>
+                                Rua Endereço, 987 - Jardim Bootstrap - São Paulo/SP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim da aba Contatos-->
+        <footer>
+            <div class="container text-center fw-medium p-2">
+                <a href="https://linktr.ee/fde95" target="_blank"> 2023 &copy; Criado e Desenvolvido por - Felipe Espinoza - Créditos de imagem no "alt" HTML de cada imagem</a>
+            </div>
+        </footer>
+    </div><!--Fim do Spy no Scroll-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./lib/jquery.validate.min.js"></script>
+    <script src="./lib/messages_pt_BR.min.js"></script>
+    <script src="./lib/jquery.mask.min.js"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
